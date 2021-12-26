@@ -1,0 +1,5 @@
+coverage/*
+*.cdr
+*.old
+*min.js
+*min.css

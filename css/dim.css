@@ -1,0 +1,17 @@
+:root {
+    --transparente: rgb(0 0 0 / 0%);
+    --escuro-n0: #242424;
+    --escuro-n1: #3A3A3A;
+    --escuro-n2: #5A5A5A;
+    --escuro-n3: #707070;
+    --texto-b0: #FFF;
+    --texto-b1: #CDCDCD;
+    --texto-b2: #EAEAEA;
+    --ascendente-n0: #D14270;
+    --ascendente-n1: #5D444D;
+    --bnt-verde: #1F7E3A;
+}
+
+html{
+    display: block;
+}

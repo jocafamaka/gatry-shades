@@ -1,0 +1,176 @@
+:root {
+    color-scheme: dark;
+}
+
+html {
+    display: none;
+}
+
+* {
+    outline: 0 !important;
+}
+
+html,
+body {
+    background-color: var(--escuro-n0) !important;
+}
+
+a,
+.new-account span {
+    color: var(--ascendente-n0) !important;
+}
+
+.hr {
+    border-top: 1px solid var(--escuro-n2) !important;
+}
+
+.arrow_box,
+.swal2-cancel,
+.form-control,
+.tribute-textarea,
+.form-control:focus,
+.bootstrap-tagsinput,
+.form-group.file input {
+    background: var(--escuro-n2) !important;
+}
+
+.page .no-data,
+.comments .comment,
+.comments.comments-user .comment .comment-wrapper {
+    background-color: var(--escuro-n1) !important;
+    border-color: var(--escuro-n2) !important;
+}
+
+.btn-blue,
+::selection,
+.btn-primary,
+.btn-blue:hover,
+.btn-primary:hover,
+.top-bar .menu ul li .badge,
+.swal2-styled.swal2-confirm,
+.page .bootstrap-tagsinput .tag,
+.comments .comment .comment-header .comment-time b i {
+    background: var(--ascendente-n0) !important;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem var(--ascendente-n1) !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    border-color: var(--ascendente-n1) !important;
+}
+
+body,
+select,
+input,
+textarea,
+.btn-blue,
+.swal2-cancel,
+.btn-criar-alerta,
+.swal2-styled.swal2-confirm {
+    color: var(--texto-b0) !important;
+}
+
+nav,
+footer,
+.content,
+div.header,
+.search-bar,
+.swal2-popup,
+.input-group,
+.load-more button,
+.fancybox__content,
+.promotions article,
+.promotions .load-more,
+.input-group .form-control {
+    background: var(--escuro-n1) !important;
+}
+
+label,
+.alert,
+.no-data,
+.swal2-title,
+.swal2-header,
+.swal2-content,
+.comment-content,
+.warnings-lightbox,
+.fancybox__content,
+.promotions article .image,
+.comments .comment .comment-header a,
+.promotions article .description h3 a,
+.ratings article .content .user .info a,
+.promotions article .options .option-other,
+.ratings article .content .user .info .date,
+.top-bar .header .wrapper-header .arrow_box ul li a {
+    color: var(--texto-b2) !important;
+}
+
+nav ul li a {
+    color: var(--texto-b1) !important;
+}
+
+nav ul li.active a {
+    color: var(--ascendente-n0) !important;
+}
+
+div.header {
+    border-bottom: 1px solid var(--escuro-n2) !important;
+}
+
+.top-bar .header .wrapper-header .share {
+    border-right: 1px solid var(--escuro-n2) !important;
+    border-left: 1px solid var(--escuro-n2) !important;
+}
+
+.top-bar .menu {
+    border-bottom: 0px !important;
+}
+
+.search-bar {
+    border: 1px solid var(--escuro-n2) !important;
+}
+
+.promotions article .options .option-store a,
+.comments .comment .comment-footer a.like {
+    border: 1px solid var(--escuro-n3) !important;
+}
+
+.scroll-to-top img {
+    background-color: var(--transparente) !important;
+}
+
+.btn-blue,
+.btn-blue:hover,
+.swal2-confirm,
+.swal2-confirm:hover {
+    border-color: var(--transparente) !important;
+}
+
+.btn-criar-alerta {
+    background-color: var(--bnt-verde) !important;
+}
+
+.comments .comment .comment-answers {
+    border-left: 3px solid var(--escuro-n2) !important;
+}
+
+.comments .comment .comment-header .comment-time b {
+    background: var(--ascendente-n1) !important;
+}
+
+.erro,
+.page label.error {
+    color: var(--erro);
+}
+
+img {
+    background: var(--escuro-n0) !important;
+    transition: opacity .3s;
+}
+
+body:not(.is-using-mouse) .fancybox__container :focus {
+    box-shadow: none !important;
+}

@@ -1,0 +1,5 @@
+img:hover,
+.scroll-to-top img,
+.fancybox__content img {
+    opacity: 1 !important;
+}

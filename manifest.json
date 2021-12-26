@@ -1,0 +1,50 @@
+{
+   "manifest_version": 2,
+   "name": "Gatry Shades",
+   "description": "Opções de temas para o Gatry.com",
+   "version": "1.0.1",
+   "content_scripts": [
+      {
+         "run_at": "document_start",
+         "all_frames": true,
+         "js": [
+            "js/listener.min.js"
+         ],
+         "css": [
+            "css/main.min.css"
+         ],
+         "matches": [
+            "*://gatry.com/*"
+         ]
+      }
+   ],
+   "background": {
+      "persistent": false,
+      "scripts": [
+         "js/background.min.js"
+      ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icone32.png",
+      "default_popup": "menu.html",
+      "default_title": "Gatry Shades"
+   },
+   "icons": {
+      "128": "icons/icone128.png",
+      "64": "icons/icone64.png",
+      "32": "icons/icone32.png",
+      "16": "icons/icone16.png"
+   },
+   "omnibox": {
+      "keyword": "gatry"
+   },
+   "permissions": [
+      "storage",
+      "tabs"
+   ],
+   "web_accessible_resources": [
+      "images/*.png",
+      "css/*.min.css"
+   ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://www.benbeckford.com; child-src 'self' https://www.benbeckford.com; frame-ancestors 'self' https://www.benbeckford.com; object-src 'self'"
+}
