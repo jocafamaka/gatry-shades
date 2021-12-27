@@ -3,7 +3,7 @@
 Extensão que dá a possibilidade de aplicar temas ao site gatry.com, bem como demais funcionalidade para reduzir a luminosidade de imagens e demais componentes.
 
 ## Instalar
-Atalmente compatível com **Firefox**, **Google Chrome**, **Microsoft Edge**.
+Atalmente compatível com **Firefox**, **Google Chrome** e **Microsoft Edge**.
 
 [Clique aqui](https://chrome.google.com/webstore/detail/gatry-shades/nmflikdijdboedbhmohgcaakjkniignj?hl=pt-BR) para instalar no Firefox. 
 
