@@ -1,5 +1,6 @@
 coverage/*
 *.cdr
 *.old
-*min.js
-*min.css
+*.min.js
+!jquery-3.6.0.slim.min.js
+*.min.css
