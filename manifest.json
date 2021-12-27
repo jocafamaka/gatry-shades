@@ -2,7 +2,7 @@
    "manifest_version": 2,
    "name": "Gatry Shades",
    "description": "Opções de temas para o Gatry.com",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "content_scripts": [
       {
          "run_at": "document_start",
@@ -46,5 +46,5 @@
       "images/*.png",
       "css/*.min.css"
    ],
-   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://www.benbeckford.com; child-src 'self' https://www.benbeckford.com; frame-ancestors 'self' https://www.benbeckford.com; object-src 'self'"
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; child-src 'self'; frame-ancestors 'self'; object-src 'self'"
 }

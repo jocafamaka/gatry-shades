@@ -10,17 +10,21 @@
     --ascendente-n0: #D14270;
     --ascendente-n1: #5D444D;
     --bnt-verde: #1F7E3A;
+    color-scheme: dark;
 }
 
-html {
-    width: 230px;
+html, body {
     background: var(--escuro-n2);
-    color: var(--texto-b2);
-    padding: 10px;
-    font-size: 1.3em;
 }
 
 body {
+    width: 230px;
+    color: var(--texto-b2);
+    padding: 10px;
+    font-size: 16px;
+}
+
+#conteudo {
     margin-left: auto;
     margin-right: auto;
     max-width: 200px;

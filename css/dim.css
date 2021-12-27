@@ -12,6 +12,6 @@
     --bnt-verde: #1F7E3A;
 }
 
-html{
-    display: block;
+body {
+    display: block !important;
 }

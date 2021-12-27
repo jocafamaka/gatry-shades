@@ -2,10 +2,15 @@
 
 Extensão que dá a possibilidade de aplicar temas ao site gatry.com, bem como demais funcionalidade para reduzir a luminosidade de imagens e demais componentes.
 
-## Chrome Store
-[Clique aqui](https://chrome.google.com/webstore/detail/gatry-shades/nmflikdijdboedbhmohgcaakjkniignj?hl=pt-BR) para cessar a página da extensão na Web Store. 
+## Instalar
+Atalmente compatível com **Firefox**, **Google Chrome**, **Microsoft Edge**.
 
-Compatível com **Google Chrome** e **Microsoft Edge**.
+[Clique aqui](https://chrome.google.com/webstore/detail/gatry-shades/nmflikdijdboedbhmohgcaakjkniignj?hl=pt-BR) para instalar no Firefox. 
+
+[Clique aqui](https://chrome.google.com/webstore/detail/gatry-shades/nmflikdijdboedbhmohgcaakjkniignj?hl=pt-BR) para instalar no Google Chrome.
+
+[Clique aqui](https://chrome.google.com/webstore/detail/gatry-shades/nmflikdijdboedbhmohgcaakjkniignj?hl=pt-BR) para instalar no Microsoft Edge. 
+
 
 ## Capturas de Telas
 Menu da extensão

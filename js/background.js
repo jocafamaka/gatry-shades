@@ -4,7 +4,7 @@ chrome.omnibox.onInputEntered.addListener(
     chrome.tabs.create({ url: url });
   });
 
-chrome.extension.onMessage.addListener(function (msg, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 
   if (sender.id === chrome.runtime.id && msg.init) {
     chrome.storage.local.get("gs_config", function (config) {

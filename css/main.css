@@ -2,7 +2,7 @@
     color-scheme: dark;
 }
 
-html {
+body {
     display: none;
 }
 
@@ -37,6 +37,7 @@ a,
 .page .no-data,
 .comments .comment,
 .comments.comments-user .comment .comment-wrapper {
+    cursor: text;
     background-color: var(--escuro-n1) !important;
     border-color: var(--escuro-n2) !important;
 }
