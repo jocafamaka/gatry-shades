@@ -5,7 +5,7 @@ Extensão que dá a possibilidade de aplicar temas ao site gatry.com, bem como d
 ## Instalar
 Atalmente compatível com **Firefox**, **Google Chrome** e **Microsoft Edge**.
 
-[Clique aqui](https://chrome.google.com/webstore/detail/gatry-shades/nmflikdijdboedbhmohgcaakjkniignj?hl=pt-BR) para instalar no Firefox. 
+[Clique aqui](https://addons.mozilla.org/pt-BR/firefox/addon/gatry-shades/) para instalar no Firefox. 
 
 [Clique aqui](https://chrome.google.com/webstore/detail/gatry-shades/nmflikdijdboedbhmohgcaakjkniignj?hl=pt-BR) para instalar no Google Chrome.
 
