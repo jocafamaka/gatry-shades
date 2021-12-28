@@ -2,16 +2,16 @@
    "manifest_version": 2,
    "name": "Gatry Shades",
    "description": "Opções de temas para o Gatry.com",
-   "version": "1.1.0",
+   "version": "1.1.1",
    "content_scripts": [
       {
          "run_at": "document_start",
          "all_frames": true,
          "js": [
-            "js/listener.min.js"
+            "js/listener.js"
          ],
          "css": [
-            "css/main.min.css"
+            "css/main.css"
          ],
          "matches": [
             "*://gatry.com/*"
@@ -21,7 +21,7 @@
    "background": {
       "persistent": false,
       "scripts": [
-         "js/background.min.js"
+         "js/background.js"
       ]
    },
    "browser_action": {
@@ -44,7 +44,7 @@
    ],
    "web_accessible_resources": [
       "images/*.png",
-      "css/*.min.css"
+      "css/*.css"
    ],
    "content_security_policy": "script-src 'self'; object-src 'self';"
 }

@@ -22,7 +22,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
                 old.remove();
 
             link.id = "gs-style";
-            link.href = chrome.runtime.getURL(`css/${msg.valor}.min.css`);
+            link.href = chrome.runtime.getURL(`css/${msg.valor}.css`);
 
             head.appendChild(link);
         }
@@ -33,7 +33,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 
             if (msg.valor && escCss === null) {
                 link.id = "gs-escn-style";
-                link.href = chrome.runtime.getURL(`css/image-n${msg.config.escurecerNivel}.min.css`);
+                link.href = chrome.runtime.getURL(`css/image-n${msg.config.escurecerNivel}.css`);
 
                 head.appendChild(link);
             }
@@ -50,7 +50,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
                 old.remove();
 
             link.id = "gs-escn-style";
-            link.href = chrome.runtime.getURL(`css/image-n${msg.valor}.min.css`);
+            link.href = chrome.runtime.getURL(`css/image-n${msg.valor}.css`);
 
             head.appendChild(link);
         }
@@ -61,7 +61,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 
             if (msg.valor && escClarearCss === null) {
                 link.id = "gs-escc-style";
-                link.href = chrome.runtime.getURL('css/image-clarear.min.css');
+                link.href = chrome.runtime.getURL('css/image-clarear.css');
 
                 head.appendChild(link);
             }
