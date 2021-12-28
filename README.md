@@ -9,7 +9,7 @@ Atualmente compatível com **Firefox**, **Google Chrome** e **Microsoft Edge**.
 
 [Clique aqui](https://chrome.google.com/webstore/detail/gatry-shades/nmflikdijdboedbhmohgcaakjkniignj?hl=pt-BR) para instalar no Google Chrome.
 
-[Clique aqui](https://chrome.google.com/webstore/detail/gatry-shades/nmflikdijdboedbhmohgcaakjkniignj?hl=pt-BR) para instalar no Microsoft Edge. 
+[Clique aqui](https://microsoftedge.microsoft.com/addons/detail/gatry-shades/nmpdhoenlphjfcpechnkkfameabbgonj) para instalar no Microsoft Edge. 
 
 
 ## Capturas de Telas
