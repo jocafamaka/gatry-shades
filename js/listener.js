@@ -3,6 +3,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.querySelector(".share .link-icon").style.backgroundImage = `url("${chrome.runtime.getURL('images/icone_adicionar.png')}")`;
     document.querySelector(".login .link-icon").style.backgroundImage = `url("${chrome.runtime.getURL('images/icone_login_dark.png')}")`;
 
+    var bgs = document.querySelectorAll(".bg-white");
+
+    for (i = 0; i < bgs.length; i++) {
+        bgs[i].classList.remove('bg-white');
+        bgs[i].classList.add('bg-white-fix');
+    }
+
     ready();
 });
 
