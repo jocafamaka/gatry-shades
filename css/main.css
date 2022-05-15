@@ -192,21 +192,26 @@ body:not(.is-using-mouse) .fancybox__container :focus {
     box-shadow: none !important;
 }
 
-.comments .comment .mention-user, .tribute-container ul {
-    background: var(--gs-escuro-n2);
+.mention-user, .tribute-container ul {
+    background: var(--gs-escuro-n2) !important;
 }
 
-.tribute-container::-webkit-scrollbar-track
-{
-	background-color: var(--gs-escuro-n2);
+.tribute-container ul {
+    border-color: var(--gs-escuro-n3) !important;
 }
 
-.tribute-container::-webkit-scrollbar
-{
-	width: 8px;
+.tribute-container li.highlight {
+    background: var(--gs-escuro-n3) !important;
 }
 
-.tribute-container::-webkit-scrollbar-thumb
-{
-	background-color: var(--gs-escuro-n3);
+.tribute-container::-webkit-scrollbar-track {
+    background-color: var(--gs-escuro-n2);
+}
+
+.tribute-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tribute-container::-webkit-scrollbar-thumb {
+    background-color: var(--gs-escuro-n3);
 }
