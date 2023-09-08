@@ -37,9 +37,9 @@ a,
 }
 
 .page .no-data,
+.rating .comment,
 .comments .comment,
 .comments.comments-user .comment .comment-wrapper {
-    cursor: text;
     background-color: var(--gs-escuro-n1) !important;
     border-color: var(--gs-escuro-n2) !important;
 }

@@ -2,7 +2,7 @@
    "manifest_version": 2,
    "name": "Gatry Shades",
    "description": "Opções de temas para o Gatry.com",
-   "version": "1.1.5",
+   "version": "1.1.6",
    "content_scripts": [
       {
          "run_at": "document_start",
