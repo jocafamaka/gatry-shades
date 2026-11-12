@@ -1,60 +1,152 @@
-<html>
+<!doctype html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gatry Shades</title>
-    <link rel="stylesheet" href="css/pure.css">
+    <link rel="stylesheet" href="css/accent.css">
     <link rel="stylesheet" href="css/menu.css">
-    <script type="text/javascript" src="js/jquery-3.6.0.slim.js"></script>
-    <script type="text/javascript" src='js/menu.js'></script>
+    <script src="js/jquery-3.6.0.slim.js" defer></script>
+    <script src="js/config.js" defer></script>
+    <script src="js/menu.js" defer></script>
 </head>
 
 <body>
-    <div id="conteudo">
-        <div class="pure-g">
-            <div id="header" class="pure-u-1">
-                <label id="gatry">Gatry</label> Shades
+    <div class="popup" id="conteudo">
+        <header class="brand">
+            <img class="brand-icon" src="icons/icone64.png" alt="" width="38" height="38">
+            <div>
+                <h1><span>Gatry</span> Shades</h1>
+                <p>Aparência e conforto visual</p>
             </div>
-        </div>
-        <div class="pure-g" id="opcoes">
-            <form class="pure-form pure-form-stacked">
-                <fieldset>
-                    <div class="pure-u-1">
-                        <label for="temaOpt">Tema</label>
-                        <select id="temaOpt">
-                            <option value="dim">Acinzentado</option>
-                            <option value="true-dark">Escuro</option>
-                        </select>
+        </header>
+
+        <main id="opcoes">
+            <form aria-label="Preferências do Gatry Shades">
+                <fieldset class="setting-group">
+                    <legend>Tema do site</legend>
+                    <div class="theme-options">
+                        <label class="theme-option">
+                            <input class="visually-hidden" type="radio" name="temaOpt" value="original">
+                            <span class="theme-card">
+                                <span class="theme-preview theme-preview--original" aria-hidden="true"><i></i></span>
+                                <span class="theme-name">Original</span>
+                                <svg class="theme-check" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 8 2.5 2.5L12 5"></path></svg>
+                            </span>
+                        </label>
+                        <label class="theme-option">
+                            <input class="visually-hidden" type="radio" name="temaOpt" value="dim">
+                            <span class="theme-card">
+                                <span class="theme-preview theme-preview--dim" aria-hidden="true"><i></i></span>
+                                <span class="theme-name">Acinzentado</span>
+                                <svg class="theme-check" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 8 2.5 2.5L12 5"></path></svg>
+                            </span>
+                        </label>
+                        <label class="theme-option">
+                            <input class="visually-hidden" type="radio" name="temaOpt" value="true-dark">
+                            <span class="theme-card">
+                                <span class="theme-preview theme-preview--dark" aria-hidden="true"><i></i></span>
+                                <span class="theme-name">Escuro</span>
+                                <svg class="theme-check" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 8 2.5 2.5L12 5"></path></svg>
+                            </span>
+                        </label>
                     </div>
+
+                    <label class="setting-row retro-setting">
+                        <span class="setting-copy">
+                            <span class="setting-title" id="retroTitulo">Estilo retrô</span>
+                            <span class="helper-text" id="retroDescricao">Fontes, cantos e botões do layout antigo.</span>
+                        </span>
+                        <span class="switch">
+                            <input type="checkbox" role="switch" id="estiloRetroOpt" aria-labelledby="retroTitulo" aria-describedby="retroDescricao">
+                            <span class="switch-track" aria-hidden="true"></span>
+                        </span>
+                    </label>
+
+                    <fieldset class="accent-group">
+                        <legend>Cor de destaque</legend>
+                        <div class="accent-row">
+                            <span class="helper-text" id="corDestaqueNome">Original</span>
+                            <div class="accent-options">
+                                <label title="Original">
+                                    <input class="visually-hidden" type="radio" name="corDestaqueOpt" value="original" aria-label="Original">
+                                    <span class="accent-swatch accent-swatch--original" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m4 8 2.5 2.5L12 5"></path></svg></span>
+                                </label>
+                                <label title="Azul">
+                                    <input class="visually-hidden" type="radio" name="corDestaqueOpt" value="blue" aria-label="Azul">
+                                    <span class="accent-swatch accent-swatch--blue" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m4 8 2.5 2.5L12 5"></path></svg></span>
+                                </label>
+                                <label title="Verde">
+                                    <input class="visually-hidden" type="radio" name="corDestaqueOpt" value="green" aria-label="Verde">
+                                    <span class="accent-swatch accent-swatch--green" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m4 8 2.5 2.5L12 5"></path></svg></span>
+                                </label>
+                                <label title="Âmbar">
+                                    <input class="visually-hidden" type="radio" name="corDestaqueOpt" value="amber" aria-label="Âmbar">
+                                    <span class="accent-swatch accent-swatch--amber" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m4 8 2.5 2.5L12 5"></path></svg></span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
                 </fieldset>
-                <fieldset>
-                    <div class="pure-u-1">
-                        <label for="escurecerOpt" class="pure-checkbox">
-                            <input type="checkbox" id="escurecerOpt" /> Escurecer imagens
+
+                <fieldset class="setting-group">
+                    <legend>Imagens</legend>
+                    <div class="settings-card">
+                        <label class="setting-row">
+                            <span class="setting-copy">
+                                <span class="setting-title" id="escurecerTitulo">Escurecer imagens</span>
+                            </span>
+                            <span class="switch">
+                                <input type="checkbox" role="switch" id="escurecerOpt" aria-labelledby="escurecerTitulo">
+                                <span class="switch-track" aria-hidden="true"></span>
+                            </span>
                         </label>
-                    </div>
-                    <div class="pure-u-1">
-                        <label for="escurecerNivelOpt">Nível</label>
-                        <select id="escurecerNivelOpt">
-                            <option value="1">25%</option>
-                            <option value="2">50%</option>
-                            <option value="3">75%</option>
-                        </select>
-                    </div>
-                    <div class="pure-u-1">
-                        <label for="escurecerClarearOpt" class="pure-checkbox">
-                            <input type="checkbox" id="escurecerClarearOpt" /> Clarear ao passar mouse
-                        </label>
+
+                        <div class="image-options" id="imagemOpcoes">
+                            <fieldset class="intensity-group">
+                                <legend>Intensidade</legend>
+                                <div class="intensity-options">
+                                    <label>
+                                        <input class="visually-hidden" type="radio" name="escurecerNivelOpt" value="1">
+                                        <span>25%</span>
+                                    </label>
+                                    <label>
+                                        <input class="visually-hidden" type="radio" name="escurecerNivelOpt" value="2">
+                                        <span>50%</span>
+                                    </label>
+                                    <label>
+                                        <input class="visually-hidden" type="radio" name="escurecerNivelOpt" value="3">
+                                        <span>75%</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <label class="setting-row hover-setting">
+                                <span class="setting-copy">
+                                    <span class="setting-title" id="clarearTitulo">Clarear ao passar o mouse</span>
+                                </span>
+                                <span class="switch">
+                                    <input type="checkbox" role="switch" id="escurecerClarearOpt" aria-labelledby="clarearTitulo">
+                                    <span class="switch-track" aria-hidden="true"></span>
+                                </span>
+                            </label>
+                        </div>
                     </div>
                 </fieldset>
             </form>
-            <div class="pure-u-1 projeto hr">
-                <a id="gitLink">
-                    <img src="images/github.svg"> Visite o projeto no GitHub!
-                </a>
-                <label id="aviso">Atualize a aba do Gatry!</label>
-            </div>
-        </div>
+
+            <p class="notice" id="aviso" role="status" hidden>Atualize a aba do Gatry para aplicar as alterações.</p>
+        </main>
+
+        <footer class="popup-footer">
+            <a id="gitLink" href="https://github.com/jocafamaka/gatry-shades" target="_blank" rel="noopener noreferrer">
+                <img src="images/github.svg" alt="" width="14" height="14">
+                Visitar o GitHub
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M7 9l6-6"></path></svg>
+            </a>
+        </footer>
     </div>
 </body>
 

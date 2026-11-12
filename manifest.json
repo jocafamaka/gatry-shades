@@ -2,15 +2,20 @@
    "manifest_version": 3,
    "name": "Gatry Shades",
    "description": "Opções de temas para o Gatry.com",
-   "version": "1.1.7",
+   "version": "2.0.1",
    "icons": {
      "128": "icons/icone128.png",
      "64": "icons/icone64.png",
+     "48": "icons/icone48.png",
      "32": "icons/icone32.png",
      "16": "icons/icone16.png"
    },
    "action": {
-     "default_icon": "icons/icone32.png",
+     "default_icon": {
+       "16": "icons/icone16.png",
+       "32": "icons/icone32.png",
+       "48": "icons/icone48.png"
+     },
      "default_popup": "menu.html",
      "default_title": "Gatry Shades"
    },
@@ -22,10 +27,19 @@
        "run_at": "document_start",
        "all_frames": true,
        "js": [
+         "js/config.js",
          "js/listener.js"
        ],
        "css": [
-         "css/main.css"
+         "css/main.css",
+         "css/true-dark.css",
+         "css/dim.css",
+         "css/accent.css",
+         "css/retro.css",
+         "css/image-n1.css",
+         "css/image-n2.css",
+         "css/image-n3.css",
+         "css/image-clarear.css"
        ],
        "matches": [
          "*://gatry.com/*"
@@ -36,25 +50,12 @@
      "keyword": "gatry"
    },
    "permissions": [
-     "storage",
-     "tabs"
+     "storage"
    ],
    "host_permissions": [
      "*://gatry.com/*"
-   ],
-   "web_accessible_resources": [
-     {
-       "resources": [
-         "images/*.png",
-         "css/*.css"
-       ],
-       "matches": [
-         "*://gatry.com/*"
-       ]
-     }
    ],
    "content_security_policy": {
      "extension_pages": "script-src 'self'; object-src 'self';"
    }
  }
- 

@@ -1,4 +1,3 @@
-img,
-.fa-star {
-    opacity: 0.25 !important;
+html[data-gs-image-level="3"] img {
+    opacity: .25 !important;
 }

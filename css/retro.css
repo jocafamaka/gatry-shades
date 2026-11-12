@@ -1,0 +1,194 @@
+/* Cosmetic approximation of the archived Gatry. The React structure stays intact. */
+html[data-gs-retro] {
+    --gs-retro-image-size: 200px;
+    --gs-retro-title-size: 26px;
+    --gs-retro-price-size: 48px;
+    --gs-retro-preview-size: 28px;
+}
+
+html[data-gs-retro] #root {
+    font-family: Arial, sans-serif;
+}
+
+html[data-gs-retro] #root main article {
+    gap: 15px !important;
+    padding: 10px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+html[data-gs-retro] #root :is([role="dialog"], [role="menu"]) {
+    border-radius: 3px !important;
+}
+
+html[data-gs-retro] #root :is([class~="rounded-btn"], input[type="search"], textarea, select) {
+    border-radius: 4px !important;
+}
+
+html[data-gs-retro] #root :is(main, [role="dialog"]) :is(button, a)[class~="rounded-btn"] {
+    font-size: 13.3333px !important;
+    font-weight: 400 !important;
+}
+
+html[data-gs-retro] #root > div > header > div > div {
+    min-height: 80px;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+html[data-gs-retro] #root > div > header a[href="/promocoes"] {
+    height: auto !important;
+    font-size: 43.2px !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+    letter-spacing: normal !important;
+}
+
+html[data-gs-retro] #root nav[aria-label="Seções"] {
+    gap: 0 !important;
+    padding-top: 0 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+}
+
+html[data-gs-retro] #root nav[aria-label="Seções"] button {
+    flex: 1 0 auto;
+    justify-content: center;
+    padding: 25px 0 !important;
+    border-bottom-width: 0 !important;
+}
+
+html[data-gs-retro] #root main article a[target="_blank"][class~="bg-field"]:has(> img) {
+    width: var(--gs-retro-image-size) !important;
+    height: var(--gs-retro-image-size) !important;
+    border-radius: 0 !important;
+}
+
+html[data-gs-retro] #root main article a[target="_blank"][class~="bg-field"] > img {
+    object-fit: contain !important;
+}
+
+html[data-gs-retro] #root main article a[target="_blank"]:is([class~="text-lg"], [class~="text-[1.5rem]"]) {
+    font-size: var(--gs-retro-title-size) !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+}
+
+html[data-gs-retro] #root main article .tabular-nums:is([class~="text-[22px]"], [class~="text-[32px]"]) {
+    font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
+    font-size: var(--gs-retro-price-size) !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    letter-spacing: normal !important;
+}
+
+html[data-gs-retro] #root main article [class~="dark:bg-field"]:has(> [data-testid="last-commenter"]) {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+}
+
+html[data-gs-retro] #root main article [data-testid="last-commenter"] ~ p,
+html[data-gs-retro] #root main article [data-testid="last-commenter"] + button > p {
+    font-size: var(--gs-retro-preview-size) !important;
+    font-weight: 300 !important;
+    font-style: normal !important;
+    line-height: 1.4 !important;
+}
+
+/* Livre cards and threaded comments used small Arial text and simple bordered boxes. */
+html[data-gs-retro] #root main article:has(> a[href^="/perfil/"]),
+html[data-gs-retro] #root [role="dialog"][aria-label="Comentários"] [id^="comentario-"] {
+    padding: 10px !important;
+    border: 1px solid rgb(var(--color-border));
+    background: rgb(var(--color-field));
+    font-size: 13.3333px;
+}
+
+html[data-gs-retro] #root main article:has(> a[href^="/perfil/"]) p,
+html[data-gs-retro] #root [role="dialog"][aria-label="Comentários"] [id^="comentario-"] p {
+    font-size: 13.3333px !important;
+    line-height: 1.5 !important;
+}
+
+html[data-gs-retro] #root :is(main, [role="dialog"]) a[href^="/perfil/"] img {
+    border-radius: 0 !important;
+}
+
+/* Alerts use sections instead of articles, including the mobile editor/summary. */
+html[data-gs-retro] #root main:has([role="group"][aria-label="Filtrar avisos"]) [class~="rounded-[14px]"] {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+html[data-gs-retro] #root main section:has(input[aria-label="Novo alerta"]) {
+    padding: 10px !important;
+}
+
+html[data-gs-retro] #root main section:has(input[aria-label="Novo alerta"]) :is(
+    input[aria-label="Novo alerta"],
+    span:has(> button[aria-label^="Remover alerta "]),
+    button[aria-label^="Remover alerta "]
+),
+html[data-gs-retro] #root main [role="group"][aria-label="Filtrar avisos"] > button {
+    border-radius: 4px !important;
+    font-size: 13.3333px !important;
+    font-weight: 400 !important;
+}
+
+html[data-gs-retro] #root main:has([role="group"][aria-label="Filtrar avisos"]) section[aria-label] > h3 {
+    padding: 10px !important;
+}
+
+html[data-gs-retro] #root main:has([role="group"][aria-label="Filtrar avisos"]) section[aria-label] > .group {
+    gap: 10px !important;
+    padding: 10px !important;
+}
+
+html[data-gs-retro] #root main:has([role="group"][aria-label="Filtrar avisos"]) section[aria-label] > .group [class~="text-sm"] {
+    font-size: 13.3333px !important;
+}
+
+html[data-gs-retro] #root main:has([role="group"][aria-label="Filtrar avisos"]) section[aria-label] > .group :is(img, [class~="rounded-lg"]) {
+    border-radius: 0 !important;
+}
+
+/* The offer CTA is a span inside a link, so the generic button rule misses it. */
+html[data-gs-retro] #root main:has([role="group"][aria-label="Filtrar avisos"]) section[aria-label] [class~="rounded-btn"] {
+    border-radius: 4px !important;
+    font-size: 13.3333px !important;
+    font-weight: 400 !important;
+}
+
+@media (max-width: 767px) {
+    html[data-gs-retro] {
+        --gs-retro-image-size: 140px;
+        --gs-retro-title-size: 18px;
+        --gs-retro-price-size: 30px;
+        --gs-retro-preview-size: 18px;
+    }
+
+    html[data-gs-retro] #root > div > header > div > div {
+        min-height: 0;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+    }
+
+    html[data-gs-retro] #root > div > header a[href="/promocoes"] {
+        font-size: 32px !important;
+    }
+
+    html[data-gs-retro] #root nav[aria-label="Seções"] button {
+        padding: 14px 0 !important;
+    }
+}
+
+@media (max-width: 470px) {
+    html[data-gs-retro] {
+        --gs-retro-image-size: 90px;
+    }
+
+    html[data-gs-retro] #root nav[aria-label="Seções"] {
+        font-size: 14px !important;
+    }
+}

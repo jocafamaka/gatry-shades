@@ -1,0 +1,88 @@
+/* Shared palettes for the page and the popup color swatches. */
+:root {
+    --gs-blue: 33 73 161;
+    --gs-blue-text: 33 73 161;
+    --gs-blue-light: 143 167 215;
+    --gs-green: 21 128 61;
+    --gs-green-text: 22 101 52;
+    --gs-green-light: 134 239 172;
+    --gs-amber: 180 83 9;
+    --gs-amber-text: 146 64 14;
+    --gs-amber-light: 252 211 77;
+}
+
+html[data-gs-accent="blue"] {
+    --gs-accent: var(--gs-blue);
+    --gs-accent-text: var(--gs-blue-text);
+    --gs-accent-light: var(--gs-blue-light);
+}
+
+html[data-gs-accent="green"] {
+    --gs-accent: var(--gs-green);
+    --gs-accent-text: var(--gs-green-text);
+    --gs-accent-light: var(--gs-green-light);
+}
+
+html[data-gs-accent="amber"] {
+    --gs-accent: var(--gs-amber);
+    --gs-accent-text: var(--gs-amber-text);
+    --gs-accent-light: var(--gs-amber-light);
+}
+
+html[data-gs-accent] {
+    --color-primary: var(--gs-accent) !important;
+    --color-primary-text: var(--gs-accent-text) !important;
+    --color-primary-foreground: 255 255 255 !important;
+    --color-badge: var(--gs-accent) !important;
+    --color-badge-foreground: 255 255 255 !important;
+    --color-link: var(--gs-accent-text) !important;
+    --color-focus: var(--gs-accent) !important;
+}
+
+/* Both extension themes and Gatry's native dark mode need lighter link text. */
+html[data-gs-accent]:is(.dark, [data-gs-theme]) {
+    --gs-accent-text: var(--gs-accent-light);
+    --color-focus: var(--gs-accent-light) !important;
+}
+
+html[data-gs-accent] .text-primary {
+    color: rgb(var(--color-primary-text)) !important;
+}
+
+/* Preserve Gatry's native wordmark colors independently of the selected accent. */
+html[data-gs-accent] #root > div > header a[href="/promocoes"] {
+    color: rgb(245 4 107) !important;
+}
+
+html[data-gs-accent].dark #root > div > header a[href="/promocoes"] {
+    color: rgb(255 77 143) !important;
+}
+
+html[data-gs-accent] ::selection {
+    background-color: rgb(var(--gs-accent));
+    color: #fff;
+}
+
+html[data-gs-accent] [class~="bg-[#FFF8FB]"] {
+    background-color: rgb(var(--gs-accent) / .1) !important;
+}
+
+html[data-gs-accent] [class~="text-[#FF8FBA]"] {
+    color: rgb(var(--color-primary-text)) !important;
+}
+
+html[data-gs-accent] .comment-target {
+    --target-bg: rgb(var(--gs-accent) / .14);
+    animation-name: gs-comment-target-fade;
+}
+
+@keyframes gs-comment-target-fade {
+    0%, 68% {
+        background: var(--target-bg);
+        box-shadow: inset 3px 0 rgb(var(--gs-accent));
+    }
+    100% {
+        background: transparent;
+        box-shadow: inset 3px 0 transparent;
+    }
+}

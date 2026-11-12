@@ -1,16 +1,10 @@
-:root {
-    --gs-escuro-n0: #000000;
-    --gs-escuro-n1: #121212;
-    --gs-escuro-n2: #212121;
-    --gs-escuro-n3: #5A5A5A;
-    --gs-branco-n0: #FFFFFF;
-    --gs-branco-n1: #CDCDCD;
-    --gs-branco-n2: #A9A9A9;
-    --gs-verde-n0: #1F7E3A;
-    --gs-ascendente-n0: #D14270;
-    --gs-ascendente-n1: #5D444D;
-}
-
-body {
-    display: block !important;
+html[data-gs-theme="true-dark"] {
+    --gs-body: 0 0 0;
+    --gs-surface: 18 18 18;
+    --gs-field: 33 33 33;
+    --gs-border: 33 33 33;
+    --gs-border-strong: 90 90 90;
+    --gs-text: 255 255 255;
+    --gs-text-weak: 205 205 205;
+    --gs-text-faint: 169 169 169;
 }

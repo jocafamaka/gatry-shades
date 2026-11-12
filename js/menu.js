@@ -1,30 +1,29 @@
+let config = gsConfig.normalize();
+
 function init() {
     chrome.storage.local.get("gs_config", function (items) {
 
-        if (Object.keys(items).length === 0) {
-            items = {
-                tema: "true-dark",
-                escurecer: true,
-                escurecerClarear: true,
-                escurecerNivel: 2
-            }
-        } else if (items.hasOwnProperty('gs_config')) {
-            items = items.gs_config;
-        }
-
-        config = items;
+        config = gsConfig.normalize(items.gs_config);
 
         atualizarMenu();
 
-        $('#temaOpt').on('change', function () {
+        $('input[name="temaOpt"]').on('change', function () {
             alterarOpc('tema', this.value);
+        });
+
+        $('input[name="corDestaqueOpt"]').on('change', function () {
+            alterarOpc('accent', this.value);
+        });
+
+        $('#estiloRetroOpt').on('change', function () {
+            alterarOpc('retro', this.checked);
         });
 
         $('#escurecerOpt').on('change', function () {
             alterarOpc('esc', this.checked);
         });
 
-        $('#escurecerNivelOpt').on('change', function () {
+        $('input[name="escurecerNivelOpt"]').on('change', function () {
             alterarOpc('nivel', this.value);
         });
 
@@ -32,11 +31,10 @@ function init() {
             alterarOpc('clarear', this.checked);
         });
 
-        $('#gitLink').on('click', function () {
+        $('#gitLink').on('click', function (event) {
+            event.preventDefault();
             chrome.tabs.create({ url: "https://github.com/jocafamaka/gatry-shades" });
         });
-
-        $("#opcoes").css("opacity", 1);
     });
 }
 
@@ -45,39 +43,40 @@ function salvarConfig() {
 }
 
 function atualizarMenu() {
-    tema = $("#temaOpt");
-    esc = $("#escurecerOpt");
-    nivel = $("#escurecerNivelOpt");
-    clarear = $("#escurecerClarearOpt");
+    const tema = $('input[name="temaOpt"]');
+    const esc = $("#escurecerOpt");
+    const nivel = $('input[name="escurecerNivelOpt"]');
+    const clarear = $("#escurecerClarearOpt");
 
-    tema.children().each(function (i, e) {
-        if (e.value == config.tema)
-            $(e).attr('selected', 'selected');
-        else
-            $(e).removeAttr("selected");
-    })
+    $('input[name="corDestaqueOpt"]').each(function (i, e) {
+        e.checked = e.value === config.corDestaque;
+    });
+    $('#estiloRetroOpt').prop('checked', config.estiloRetro);
+    const accents = { original: 'Original', blue: 'Azul', green: 'Verde', amber: 'Âmbar' };
+    $('#corDestaqueNome').text(accents[config.corDestaque]);
+
+    if (config.corDestaque === 'original') {
+        document.documentElement.removeAttribute('data-gs-accent');
+    } else {
+        document.documentElement.setAttribute('data-gs-accent', config.corDestaque);
+    }
+
+    tema.each(function (i, e) {
+        e.checked = e.value === config.tema;
+    });
 
     esc.prop("checked", config.escurecer);
 
-    nivel.children().each(function (i, e) {
-        if (e.value == config.escurecerNivel)
-            $(e).attr('selected', 'selected');
-        else
-            $(e).removeAttr("selected");
-    })
+    nivel.each(function (i, e) {
+        e.checked = Number(e.value) === config.escurecerNivel;
+    });
 
     clarear.prop("checked", config.escurecerClarear);
 
-    if (esc.prop("checked")) {
-        nivel.prop("disabled", false);
-        clarear.prop("disabled", false);
-        clarear.parent().removeClass("disabled");
-    }
-    else {
-        nivel.prop("disabled", true);
-        clarear.prop("disabled", true);
-        clarear.parent().addClass("disabled");
-    }
+    const disabled = !config.escurecer;
+    nivel.prop("disabled", disabled);
+    clarear.prop("disabled", disabled);
+    $('#imagemOpcoes').toggleClass('is-disabled', disabled);
 }
 
 function alterarOpc(item, valor) {
@@ -85,12 +84,20 @@ function alterarOpc(item, valor) {
         config.tema = valor;
     }
 
+    if (item == 'accent') {
+        config.corDestaque = valor;
+    }
+
+    if (item == 'retro') {
+        config.estiloRetro = valor;
+    }
+
     if (item == 'esc') {
         config.escurecer = valor;
     }
 
     if (item == 'nivel') {
-        config.escurecerNivel = valor;
+        config.escurecerNivel = Number(valor);
     }
 
     if (item == 'clarear') {
@@ -110,9 +117,7 @@ function alterarOpc(item, valor) {
 }
 
 function exibirAviso() {
-    $("#gitLink").css("display", "none");
-    $("#aviso").css("display", "block");
-    setTimeout(function () { $("#aviso").css("opacity", "1") }, 100);
+    $("#aviso").prop("hidden", false);
 }
 
 $(document).ready(function () {

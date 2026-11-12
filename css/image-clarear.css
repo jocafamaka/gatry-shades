@@ -1,5 +1,10 @@
-img:hover,
-.scroll-to-top img,
-.fancybox__content img {
+html[data-gs-image-hover] img:hover,
+html[data-gs-image-hover] [role="dialog"][aria-label="Foto do recebido"] img {
     opacity: 1 !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html[data-gs-image-level]:not([data-gs-image-level="0"]) img {
+        transition: opacity .3s;
+    }
 }
